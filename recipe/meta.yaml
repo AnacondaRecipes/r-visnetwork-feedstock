@@ -10,8 +10,8 @@ package:
 source:
   fn: visNetwork_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/visNetwork_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/visNetwork/visNetwork_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/visNetwork_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/visNetwork/visNetwork_{{ version }}.tar.gz
   sha256: fb959f48519f294788171aed3689bd055a9c402abc8ecf0e51e3f23451946134
 
 
