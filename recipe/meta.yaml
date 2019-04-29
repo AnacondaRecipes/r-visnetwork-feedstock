@@ -1,4 +1,4 @@
-{% set version = '2.0.4' %}
+{% set version = '2.0.6' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,12 +11,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/visNetwork_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/visNetwork/visNetwork_{{ version }}.tar.gz
-  sha256: 0503408b195a812bcf589f8d34f5c3f9a38e92e78b699c3c7d737f7054d5ed15
+  sha256: ec2478e6a2af446569ef2d5210a2bc6b2600bcb7fd9908cef8f8c80b01e9c8aa
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
+  noarch: generic
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -71,8 +72,8 @@ extra:
 
 # Package: visNetwork
 # Title: Network Visualization using 'vis.js' Library
-# Version: 2.0.4
-# Date: 2018-06-13
+# Version: 2.0.6
+# Date: 2019-03-26
 # Authors@R: c( person(family = "Almende B.V.", role = c("aut", "cph"), comment = "vis.js library in htmlwidgets/lib, http://visjs.org, http://www.almende.com/home"), person("Benoit", "Thieurmel", role = c("aut", "cre"), comment = "R interface", email = "benoit.thieurmel@datastorm.fr"), person(given = "Titouan", family = "Robert",  email = "titouan.robert@datastorm.fr", role = c("aut", "ctb")) )
 # Maintainer: Benoit Thieurmel <benoit.thieurmel@datastorm.fr>
 # Description: Provides an R interface to the 'vis.js' JavaScript charting library. It allows an interactive visualization of networks.
@@ -83,12 +84,12 @@ extra:
 # License: MIT + file LICENSE
 # Suggests: knitr, rmarkdown, webshot, igraph, rpart, shiny, shinyWidgets, colourpicker, sparkline, ggraph, flashClust
 # VignetteBuilder: knitr, rmarkdown, webshot
-# RoxygenNote: 6.0.1
+# RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2018-06-14 07:23:11 UTC; Datastorm
+# Packaged: 2019-03-26 14:43:47 UTC; Datastorm
 # Author: Almende B.V. [aut, cph] (vis.js library in htmlwidgets/lib, http://visjs.org, http://www.almende.com/home), Benoit Thieurmel [aut, cre] (R interface), Titouan Robert [aut, ctb]
 # Repository: CRAN
-# Date/Publication: 2018-06-14 08:23:00 UTC
+# Date/Publication: 2019-03-26 15:10:03 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
